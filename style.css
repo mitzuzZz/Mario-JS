@@ -1,0 +1,93 @@
+@import url('http://fonts.cdnfonts.com/css/minecraft-4');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-canva {
+    width: 80%;
+    height: 500px;
+    border: 1px solid black;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-color: aquamarine;
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 3s infinite linear;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -30%;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+.mario {
+    position: absolute;
+    bottom: 0;
+    width: 180px;
+}
+
+.jump {
+    animation: jump-animation 500ms ease-out;
+}
+
+@keyframes jump-animation {
+
+    0%{
+        bottom: 0;
+    }
+    30%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 230px;
+    }
+    70%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0;
+    }
+
+}
+
+.restart-button {
+    display: none;
+    position: absolute;
+    left: 35%;
+    transform: scale(0.1);
+    cursor: pointer;
+}
+
+.restart-text {
+    display: none;
+    font-family: "Minecraft", sans-serif;
+    position: absolute;
+    left: 43.6%;
+    top: 120px;
+}
+
+.clouds {
+    position: absolute;
+    bottom: 200px;
+    width: 400px;
+    animation: pipe-animation 11s infinite linear;
+}
+
+.clouds-copy {
+    position: absolute;
+    bottom: 400px;
+    width: 200px;
+    animation: pipe-animation 25s infinite linear;
+}
